@@ -1,3 +1,4 @@
+// 1
 const countUppercaseLetters = (str) => {
     let mass = str.split('')
     let sum = 0
@@ -10,10 +11,10 @@ const countUppercaseLetters = (str) => {
 }
 console.log(countUppercaseLetters("DDDdd"))
 
+// 2
 const combineStrings = (num1, num2, str1, str2) => {
     let s1 = ''
     let s2 = ''
-    let arr = []
     for (let i = 0; i < num1 && str1.length; i++) {
         s1 += str1[i]
     }
@@ -23,3 +24,26 @@ const combineStrings = (num1, num2, str1, str2) => {
     return s1 + s2
 }
 console.log(combineStrings(1, 3, 'Apple', 'Banana'))
+
+// 3
+const containsSubstring = (s, s0) => s.includes(s0)
+console.log(containsSubstring('Programming is fun', 'gram'))
+
+// 4
+const replaceSubstring = (mainStr, clean, newStr) => mainStr.replace(clean, newStr)
+console.log(replaceSubstring('OpenAI', 'AI', 'Artificial Intelligence'))
+
+// 5
+const countWordsWithSameLetters = (str) => {
+    const arr = str.split(' ')
+    let sum = 0
+    for (let elem of arr) {
+        if(elem[0].toLowerCase() === elem[elem.length - 1]) {
+            sum++
+        }
+    }
+    return sum
+}
+console.log(countWordsWithSameLetters('Racecar radar level Civic'))
+
+// 6
