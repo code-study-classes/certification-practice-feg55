@@ -34,16 +34,32 @@ const replaceSubstring = (mainStr, clean, newStr) => mainStr.replace(clean, newS
 console.log(replaceSubstring('OpenAI', 'AI', 'Artificial Intelligence'))
 
 // 5
-const countWordsWithSameLetters = (str) => {
-    const arr = str.split(' ')
-    let sum = 0
-    for (let elem of arr) {
-        if(elem[0].toLowerCase() === elem[elem.length - 1]) {
-            sum++
-        }
-    }
-    return sum
-}
+// const countWordsWithSameLetters = (str) => {
+//     const arr = str.split(' ')
+//     let sum = 0
+//     for (let elem of arr) {
+//         if(elem[0].toLowerCase() === elem[elem.length - 1]) {
+//             sum++
+//         }
+//     }
+//     return sum
+// }
+
+const countWordsWithSameLetters = (str) => str
+    .toLowerCase()
+    .split(' ')
+    .reduce((acc, word) => acc += word[0] === word.at(-1) ? 1 : 0, 0);
+
 console.log(countWordsWithSameLetters('Racecar radar level Civic'))
 
 // 6
+// const countWordsWithA = (str) => str
+    // .toLowerCase()
+    // .split(' ')
+    // .reduce((acc, word) => acc += word.includes('a') ? 1 : 0, 0);
+// 
+const countWordsWithA = (str) => str
+    .toLowerCase()
+    .split(' ')
+    .filter((word) => word.includes("a")).length;
+console.log(countWordsWithA('Apple Banana Cherry'))
