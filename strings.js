@@ -63,3 +63,9 @@ const countWordsWithA = (str) => str
     .split(' ')
     .filter((word) => word.includes("a")).length;
 console.log(countWordsWithA('Apple Banana Cherry'))
+
+// 7
+const normalizeSpaces = (str) => str
+    .split(" ")
+    .filter((word) => word !== '').join(' ')
+console.log(normalizeSpaces("    kek    pek"))
