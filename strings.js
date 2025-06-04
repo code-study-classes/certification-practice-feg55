@@ -1,3 +1,5 @@
+const { slice } = require("prelude-ls")
+
 // 1
 const countUppercaseLetters = (str) => {
     let mass = str.split('')
@@ -69,3 +71,16 @@ const normalizeSpaces = (str) => str
     .split(" ")
     .filter((word) => word !== '').join(' ')
 console.log(normalizeSpaces("    kek    pek"))
+
+// 8
+const extractFileName = (path) => path
+    .split("/")
+    .at(-1)
+    .split(".")[0];
+
+
+// const extractFileName = (path) => {
+//     let res = path.split("/").at(-1)
+//     return res.slice(0, res.indexOf("."))
+// };
+console.log(extractFileName('C:/Users/username/Documents/example.txt'))
