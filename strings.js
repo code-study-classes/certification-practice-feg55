@@ -1,4 +1,4 @@
-const { slice } = require("prelude-ls")
+// const { slice } = require("prelude-ls")
 
 // 1
 const countUppercaseLetters = (str) => {
@@ -84,3 +84,20 @@ const extractFileName = (path) => path
 //     return res.slice(0, res.indexOf("."))
 // };
 console.log(extractFileName('C:/Users/username/Documents/example.txt'))
+
+// 9
+const encryptSentence = (str) => {
+    let arr = str.split('')
+    let evenArr = arr.filter((_,indx) => indx % 2 === 0).reverse().join('')
+    let oddArr = arr.filter((_, indx) => indx % 2 !== 0).join('')
+    // console.log(evenArr + oddArr)
+    return oddArr + evenArr
+
+}
+console.log(encryptSentence('JavaScript'))
+
+// 10
+const checkBrackets = (str) => {
+    str.reduce((acc, word) => acc += word === "(")
+}
+
