@@ -45,6 +45,10 @@ const swapHundredsAndTens = (x) => {
 }
 console.log(swapHundredsAndTens(123))
 
+// 7
+const getHundredsDigit = (x) => x <= 999 ? 0 : Math.floor((x % 1000) / 100)
+console.log(getHundredsDigit(9876))
+
 // 8
 const getFullHours = (x) => Math.floor(x / 3600)
 console.log(getFullHours(7200))
@@ -52,3 +56,7 @@ console.log(getFullHours(7200))
 // 9
 const getDayOfWeek = (x) => Math.floor(x % 7)
 console.log(getDayOfWeek(365))
+
+// 10
+const countSquares = (a, b, c) => Math.floor(a / c) * Math.floor(b / c)
+console.log(countSquares(10, 10, 5))
