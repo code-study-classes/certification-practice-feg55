@@ -42,3 +42,7 @@ console.log(isSecondQuadrant(-2, 3))
 // 9
 const isIsoscelesTriangle = (a, b, c) => a === b || b === c || a === c ? true : false
 console.log(isIsoscelesTriangle(3, 4, 3))
+
+// 10
+const areSameColorFields = (x1, y1, x2, y2) => (x1 + y1) % 2 === (x2 + y2) % 2 ? true : false
+console.log(areSameColorFields(7, 8, 1, 3))
