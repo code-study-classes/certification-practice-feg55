@@ -98,6 +98,21 @@ console.log(encryptSentence('JavaScript'))
 
 // 10
 const checkBrackets = (str) => {
-    str.reduce((acc, word) => acc += word === "(")
+    let stack = [];
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        if (char === '(') {
+            stack.push(i);
+        } else if (char === ')') {
+            if (stack.length === 0) {
+                return i;
+            }
+            stack.pop();
+        }
+    }
+    if (stack.length > 0) {
+        return -1;
+    }
+    return 0;
 }
-
+console.log(checkBrackets('((a + b) * (c - d))'))
